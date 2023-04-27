@@ -1,0 +1,28 @@
+Project Report: SDU Student Grade Tracker
+
+Introduction:
+The goal of this project is to develop an application that will allow SDU students to track their grades in various subjects. The application will be containerized with Docker and Redis will be used to store student grades. The application will be developed in Go using OOP principles. The application must not have a web interface.
+
+Project requirements:
+The application must allow students to add, view, update, and delete their grades for each course. Each student must have a unique identifier, such as a student ID number. Each course must have a unique identifier, such as a course code. The application must use Redis to store the student's grades. The application must use Docker to containerize the application. The application must be written in Go using OOP principles. The application must not have a web interface.
+
+Project steps:
+1. Set up a Redis instance with Docker. In this project, we used the official Redis Docker image to set up a Redis instance. We used the following command to start the Redis container: `docker run --name redis -d -p 6379:6379 redis`
+
+
+2. Writing a program in Go. We have developed a Go program that connects to a Redis instance and allows students to add their grades for each course. We used OOP principles when creating the Student and Course classes. The Student class has properties such as name, student ID, and a list of courses, while the Course class has properties such as course ID and student grade. We wrote methods in the Student class to add, view, update, and delete courses, and methods in the Course class to get the course code and student grades. We used the Go Redis client to store and retrieve student grades from a Redis instance.
+
+3. Application containerization with Docker. We used Docker to containerize the application. We have created a Dockerfile in which we create an application in a container.
+
+4. Application testing. We tested the app by adding, viewing, updating, and deleting grades for a sample student.
+
+5. Writing a user manual. We've written a simple user guide for the app that includes instructions for adding, viewing, updating, and deleting ratings, as well as search and sorting features.
+
+6. Implementation of error handling. We've added error handling to the application to handle cases where the Redis instance is not available or an error occurs while adding or loading data.
+
+7. Implementation of the search function. We've introduced a search feature that allows students to search for their grades by course code or grade.
+
+8. Implementation of the sorting function. We've introduced a sorting feature that allows students to sort their grades by course code or grade.
+
+Conclusion:
+The SDU Student Grade Tracker project has successfully met all the requirements listed in the project description. The project shows how to use Redis and Docker to create a simple and efficient command line tool for tracking grades. Implementing an application in Go and using OOP principles provides a solid foundation for future development and extension.
